@@ -15,3 +15,4 @@ jobs:
         uses: MetaMask/action-checkout-and-setup@a4bed6acaa2dca0916e7fbb8900b752014334e44 # 3.4.0
         with:
           is-high-risk-environment: true
+          node-version: 26.x
