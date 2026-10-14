@@ -29,6 +29,7 @@ jobs:
     needs: metadata
     if: needs.metadata.outputs.is-metamask-action == 'true'
     permissions:
+      contents: write
       pull-requests: write
     steps:
       - name: Enable auto-merge
