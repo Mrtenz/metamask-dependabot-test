@@ -1,0 +1,20 @@
+name: Dependabot
+
+on:
+  pull_request:
+
+jobs:
+  dependabot:
+    name: Check Dependabot pull request
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.user.login == 'dependabot[bot]'
+    steps:
+      - name: Fetch metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@25dd0e34f4fe68f24cc83900b1fe3fe149efef98 # 3.1.0
+
+      - name: Print dependency JSON
+        env:
+          METADATA: ${{ steps.metadata.outputs.updated-dependencies-json }}
+        run: echo "$METADATA" | jq "."
+
