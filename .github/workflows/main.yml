@@ -16,3 +16,6 @@ jobs:
         with:
           is-high-risk-environment: true
           node-version: 26.x
+
+      - name: Sleep
+        run: sleep 60
