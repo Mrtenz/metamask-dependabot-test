@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: MetaMask/action-checkout-and-setup@0543b5929698c71e3ccc6ed24eac87825669b5de # 3.5.0
+        uses: MetaMask/action-checkout-and-setup@a4bed6acaa2dca0916e7fbb8900b752014334e44 # 3.4.0
         with:
           is-high-risk-environment: true
           node-version: 26.x
